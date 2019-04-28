@@ -1,18 +1,32 @@
-<html>
-<head></head>
+<?php
 
-<body>
+require '../DAOs/DAO.php';
 
-<table>
-    <tbody><tr><td>Title</td><td>Description</td>></tr></tbody>
-    <?php
+$dao = new filmDAO();
 
-    foreach ($films as $title=>$film)
-    {
-        echo '<tr><td><a href="index.php?film='.$film->title.'">'.$film->title.'</a></td>
-        <td>'.$film->description.'</td></tr>';
-    }
-    ?>
-</table>
-</body>
-</html>
+$row = $dao->getFilm("Bruce Almighty");
+
+echo "<table border=1><tr>";
+
+
+foreach ($row as $field) echo "<td>$field</td>";
+
+echo "</tr></table>";
+
+/*
+$rows = $dao->getFilms();
+
+echo "<table border=1>";
+
+foreach ($rows as $newrow)
+{
+    echo "<tr>";
+
+    foreach ($newrow as $field) echo "<td>$field</td>";
+    echo "</tr>";
+}
+
+echo "</table>";*/
+
+$dao->closeDB();
+

@@ -1,7 +1,7 @@
 <?php
 
 include_once 'models/loginModel.php';
-
+include ('DAOs/DAO.php');
 
 class loginModel {
 
@@ -10,26 +10,31 @@ class loginModel {
     {
         if (isset($_POST['login-submit']))
         {
-            require 'DAOs/customerDAO.php';
+            require 'DAOs/DAO.php';
 
-            $DAO = new DAO();
+            $DAO = DAO::getInstance();
 
             $personemail = $_POST['personemail'];
             $custpassword = $_POST['password'];
 
-            echo $personemail;
-
 
             if (empty($personemail)||empty($custpassword)) {
                 header("Location: ../index.php?error=emptyFields");
+                return 'invalid';
+
                 exit();
             }
             else {
-                $DAO->loginSQL($personemail,$custpassword);
+
+                $reslt = $DAO->loginSQL($personemail,$custpassword);
+                header("Location: ../index.php?error=success");
+                return 'login';
+
             }
 
         }
         else {
+            return 'invalid';
 
         }
 

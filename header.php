@@ -16,9 +16,9 @@
         <a href="#"></a>
         <ul>
             <li><a href="index.php">Home</a></li>
-            <li><a href="index.php">Films</a></li>
-            <li><a href="index.php">Account</a></li>
-            <li><a href="index.php">Purchases</a></li>
+            <li><a href="Films.php">Films</a></li>
+            <li><a href="Account.php">Account</a></li>
+            <li><a href="Purchases.php">Purchases</a></li>
         </ul>
         <div class="header-login">
 

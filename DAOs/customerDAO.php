@@ -4,17 +4,40 @@ require_once ('DAOs/DAO.php');
 
 class customerDAO extends DAO
 {
-    protected $tableName = "fss_Customer";
 
-    public function pastPurchases($name)
+    protected $tableName = "fss_customer";
+
+    public function getCustomerID($custid)
     {
-        echo "Customer's Past Purchases";
-        $result = $this->getTableData("filmtitle, price","f.filmid","a.personname=\"Iola Vance\" AND a.personid=c.custid AND c.custid = op.custid AND op.payid = fp.payid AND fp.filmid");
-
-        return $result;
+        $reslt = $this->getTableData($custid, 'custid');
+        return $reslt;
 
 
     }
 
+
+    public function getPassword($personid)
+    {
+
+    }
+
+    public function getCustomers()
+    {
+        $reslt = $this->getAllTableData();
+        return $reslt;
+
+
+    }
+
+
+    public function updateAddress()
+    {
+
+    }
+
+    public function updateCustomerPassword()
+    {
+
+    }
 
 }
