@@ -1,0 +1,42 @@
+.nav-header-main {
+    overflow: hidden;
+    padding: 15px 15px;
+    background-color: darkgrey;
+    top: 0;
+}
+
+
+
+.nav-header-main ul {
+    list-style-type: none;
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+    background-color: darkgray;
+
+    float: left;
+}
+
+.nav-header-main li {
+    border-right: 12px;
+    display: inline;
+    float: left;
+}
+
+.nav-header-main a {
+    padding: 8px;
+    text-decoration: none;
+}
+
+.nav-header-main a:hover {
+    background-color: lightgrey;
+}
+
+.header-login {
+    float: right;
+}
+
+.header-login form {
+    float: left;
+}
+
