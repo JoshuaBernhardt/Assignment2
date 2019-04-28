@@ -9,8 +9,17 @@ require "header.php";
     <main>
         <h1>Homepage</h1>
 
-        <p>You are logged in</p>
-        <p>You are logged out</p>
+        <?php
+            if(isset($_SESSION['personid'])) {
+                echo '<p>You are logged in</p>';
+            }
+            else {
+                echo '<p>You are logged out</p>';
+            }
+            ?>
+
+
+
 
     </main>
 

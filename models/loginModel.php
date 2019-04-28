@@ -4,8 +4,7 @@ include_once 'models/loginModel.php';
 
 
 class loginModel {
-    public $email;
-    public $password;
+
 
     public function getLogin()
     {
@@ -13,10 +12,12 @@ class loginModel {
         {
             require 'DAOs/customerDAO.php';
 
-            $DAO = new customerDAO();
+            $DAO = new DAO();
 
             $personemail = $_POST['personemail'];
-            $custpassword = $_POST['custpassword'];
+            $custpassword = $_POST['password'];
+
+            echo $personemail;
 
 
             if (empty($personemail)||empty($custpassword)) {
@@ -24,13 +25,12 @@ class loginModel {
                 exit();
             }
             else {
-                $loginQuery = $DAO->getTableData("*","");
+                $DAO->loginSQL($personemail,$custpassword);
             }
 
         }
         else {
-            header("Location: index.php");
-            exit();
+
         }
 
 

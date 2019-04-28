@@ -2,7 +2,7 @@
 
 
 
-abstract class DAO
+class DAO
 {
 
     private $db;

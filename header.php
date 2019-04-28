@@ -22,7 +22,14 @@
         </ul>
         <div class="header-login">
 
-            <a href="login.php">Login</a>
+            <?php
+                if(isset($_SESSION['personid'])) {
+                    echo '<a href="logout.php">Logout</a>';
+                }
+                else {
+                    echo '<a href="login.php">Login</a>';
+                }
+            ?>
             <a href="register.php">Register</a>
 </header>
 </body>

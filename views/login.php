@@ -9,7 +9,7 @@
 <main>
     <div class="wrapper-main">
         <section class="section-default">
-            <h1>Signup</h1>
+            <h1>Login</h1>
             <form method="post" action="">
     Email:<br>
                 <input type="text" name="personemail" required="required">
