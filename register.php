@@ -4,12 +4,7 @@
 
 require "header.php";
 
-include("controllers/Register.php");
-
-
-$registerController = new Register();
-
-$registerController->register();
+include ("views/register.php");
 
 require "footer.php";
 

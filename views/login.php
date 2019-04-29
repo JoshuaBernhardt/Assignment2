@@ -22,7 +22,7 @@ Password:<br>
                 <br>
 
                 <br>
-                <input type="submit" value="Login">
+                <button type="submit" name="login-submit"> Login</button>
             </form>
         </section>
     </div>

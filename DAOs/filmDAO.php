@@ -5,6 +5,8 @@ require_once ('DAOs/DAO.php');
 class filmDAO extends DAO
 {
 
+    protected $tableName = "fss_film";
+
 
     public function getFilms()
     {

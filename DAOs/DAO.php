@@ -53,12 +53,6 @@
      }
 
 
-     function pastPurchases()
-     {
-         $reslt = $this->db->query("SELECT * FROM fss_person WHERE personid=='39'");
-
-         return $reslt;
-     }
  }
 
 
